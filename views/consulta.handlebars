@@ -1,0 +1,24 @@
+    <div class="container">
+        <h1>Tela de Consulta</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each posts}} {{#dataValues}}
+                <tr>
+                    <td>{{nome}}</td>
+                    <td>{{cidade}}</td>
+                    <td>
+                    <a href="/editar/{{id}}">  <button class="btn btn-primary">Editar</button> </a>
+                    <a href="/excluir/{{id}}"> <button class="btn btn-danger">Excluir</button> </a>
+                    </td>
+                </tr>
+                {{/dataValues}} {{/each}}
+            </tbody>
+        </table>
+    </div>
